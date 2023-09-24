@@ -44,3 +44,19 @@ app.get('/search', async (req, res) => {
 
 // Start the server
 app.listen(3000, () => console.log('Server is running on port 3000'));
+
+// ... other parts of your JavaScript ...
+
+// Define a route to get job listings
+app.get('/api/jobs', async (req, res) => {
+    try {
+        // Find all jobs in the database (you might want to filter or paginate these in a real app)
+        const jobs = await Job.find({});
+        res.json(jobs);
+    } catch (err) {
+        console.error('Error getting jobs:', err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// ... other parts of your JavaScript ...

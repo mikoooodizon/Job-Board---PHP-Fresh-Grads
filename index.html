@@ -24,37 +24,30 @@
         <h1 class="title">Job Board</h1>
         <section id="featuredJobs" class="featured-jobs">
             <h2>Featured Jobs</h2>
-            <!-- Featured job listings will go here -->
+            <div class="job">
+                <h3>Waiter</h3>
+                <p>Location: New York, NY</p>
+                <p>Keywords: Customer Service, Food Service</p>
+                <button type="button" onclick="applyForJob()">Apply Now</button>
+            </div>
+            <div class="job">
+                <h3>Cashier</h3>
+                <p>Location: San Francisco, CA</p>
+                <p>Keywords: Customer Service, Retail</p>
+                <button type="button" onclick="applyForJob()">Apply Now</button>
+            </div>
+            <div class="job">
+                <h3>Personal Assistant</h3>
+                <p>Location: Austin, TX</p>
+                <p>Keywords: Organization, Administration</p>
+                <button type="button" onclick="applyForJob()">Apply Now</button>
+            </div>
         </section>
         <section id="jobList" class="job-list">
-            <!-- Job listings will go here -->
+            <!-- Job listings will be appended here by JavaScript -->
         </section>
     </main>
     <script src="scripts.js" defer></script>
-
-        <!-- ... other parts of your HTML ... -->
-<section id="featuredJobs" class="featured-jobs">
-    <h2>Featured Jobs</h2>
-    <div class="job">
-        <h3>Front-end Developer</h3>
-        <p>Location: New York, NY</p>
-        <p>Keywords: JavaScript, HTML, CSS</p>
-        <button type="button" onclick="applyForJob()">Apply Now</button>
-    </div>
-    <div class="job">
-        <h3>Back-end Developer</h3>
-        <p>Location: San Francisco, CA</p>
-        <p>Keywords: Node.js, Express, MongoDB</p>
-        <button type="button" onclick="applyForJob()">Apply Now</button>
-    </div>
-    <div class="job">
-        <h3>Full-stack Developer</h3>
-        <p>Location: Austin, TX</p>
-        <p>Keywords: JavaScript, Node.js, React</p>
-        <button type="button" onclick="applyForJob()">Apply Now</button>
-    </div>
-</section>
-<!-- ... other parts of your HTML ... -->
-
+    <script src="app.js" defer></script>
 </body>
 </html>

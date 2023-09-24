@@ -60,3 +60,90 @@ async function searchJobs() {
         alert('Search failed!');
     }
 }
+
+// ... other parts of your JavaScript ...
+
+async function loadJobs() {
+    try {
+        // Fetch jobs from the server
+        const response = await fetch('http://localhost:3000/api/jobs');
+        const jobs = await response.json();
+        
+        // Get the job list element from the DOM
+        const jobList = document.getElementById('jobList');
+        
+        // Create and append a div for each job to the job list element
+        jobs.forEach(job => {
+            const jobDiv = document.createElement('div');
+            jobDiv.className = 'job';
+            jobDiv.innerHTML = `
+                <h3>${job.title}</h3>
+                <p>Location: ${job.location}</p>
+                <p>Keywords: ${job.keywords.join(', ')}</p>
+                <button type="button" onclick="applyForJob()">Apply Now</button>
+            `;
+            jobList.appendChild(jobDiv);
+        });
+    } catch (err) {
+        console.error('Error loading jobs:', err);
+    }
+}
+
+// Load the jobs when the page loads
+window.addEventListener('load', loadJobs);
+
+// ... other parts of your JavaScript ...
+
+window.addEventListener('load', () => {
+    // Define some mock job data
+    const mockJobs = [
+        { title: 'Secretary', location: 'Los Angeles, CA', keywords: ['Organization', 'Administration'] },
+        { title: 'Receptionist', location: 'Chicago, IL', keywords: ['Customer Service', 'Telephone'] },
+        { title: 'Data Entry Clerk', location: 'Houston, TX', keywords: ['Typing', 'Data Processing'] },
+        // ... add more mock jobs as needed ...
+    ];
+    
+    // Get the job list element from the DOM
+    const jobList = document.getElementById('jobList');
+    
+    // Append a div for each mock job to the job list element
+    mockJobs.forEach(job => {
+        const jobDiv = document.createElement('div');
+        jobDiv.className = 'job';
+        jobDiv.innerHTML = `
+            <h3>${job.title}</h3>
+            <p>Location: ${job.location}</p>
+            <p>Keywords: ${job.keywords.join(', ')}</p>
+            <button type="button" onclick="applyForJob()">Apply Now</button>
+        `;
+        jobList.appendChild(jobDiv);
+    });
+});
+
+// ... other parts of your JavaScript ...
+
+window.addEventListener('load', () => {
+    // Define some mock job data
+    const mockJobs = [
+        { title: 'Secretary', location: 'Los Angeles, CA', keywords: ['Organization', 'Administration'] },
+        { title: 'Receptionist', location: 'Chicago, IL', keywords: ['Customer Service', 'Telephone'] },
+        { title: 'Data Entry Clerk', location: 'Houston, TX', keywords: ['Typing', 'Data Processing'] },
+        // ... add more mock jobs as needed ...
+    ];
+    
+    // Get the job list element from the DOM
+    const jobList = document.getElementById('jobList');
+    
+    // Append a div for each mock job to the job list element
+    mockJobs.forEach(job => {
+        const jobDiv = document.createElement('div');
+        jobDiv.className = 'job';
+        jobDiv.innerHTML = `
+            <h3>${job.title}</h3>
+            <p>Location: ${job.location}</p>
+            <p>Keywords: ${job.keywords.join(', ')}</p>
+            <button type="button" onclick="applyForJob()">Apply Now</button>
+        `;
+        jobList.appendChild(jobDiv);
+    });
+});
