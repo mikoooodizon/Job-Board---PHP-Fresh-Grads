@@ -45,7 +45,6 @@ async function searchJobs() {
         jobDiv.innerHTML = `
             <h3>${job.title}</h3>
             <p>Location: ${job.location}</p>
-            <p>Keywords: ${job.keywords.join(', ')}</p>
             <button type="button" onclick="applyForJob()">Apply Now</button>
         `;
         jobList.appendChild(jobDiv);
@@ -64,7 +63,6 @@ window.addEventListener('load', () => {
         jobDiv.innerHTML = `
             <h3>${job.title}</h3>
             <p>Location: ${job.location}</p>
-            <p>Keywords: ${job.keywords.join(', ')}</p>
             <button type="button" onclick="applyForJob()">Apply Now</button>
         `;
         jobList.appendChild(jobDiv);

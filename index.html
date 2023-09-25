@@ -20,32 +20,34 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="main">
         <h1 class="title">Job Board</h1>
-        <section id="featuredJobs" class="featured-jobs">
-            <h2>Featured Jobs</h2>
-            <div class="job">
-                <h3>Waiter</h3>
-                <p>Location: New York, NY</p>
-                <p>Keywords: Customer Service, Food Service</p>
-                <button type="button" onclick="applyForJob()">Apply Now</button>
-            </div>
-            <div class="job">
-                <h3>Cashier</h3>
-                <p>Location: San Francisco, CA</p>
-                <p>Keywords: Customer Service, Retail</p>
-                <button type="button" onclick="applyForJob()">Apply Now</button>
-            </div>
-            <div class="job">
-                <h3>Personal Assistant</h3>
-                <p>Location: Austin, TX</p>
-                <p>Keywords: Organization, Administration</p>
-                <button type="button" onclick="applyForJob()">Apply Now</button>
-            </div>
-        </section>
-        <section id="jobList" class="job-list">
-            <!-- Job listings will be appended here by JavaScript -->
-        </section>
+        <div class="main-content"> <!-- Added this wrapper -->
+            <section id="featuredJobs" class="featured-jobs">
+                <h2>Featured Jobs</h2>
+                <div class="job">
+                    <h3>Waiter</h3>
+                    <p>Location: New York, NY</p>
+                    <p>Keywords: Customer Service, Food Service</p>
+                    <button type="button" onclick="applyForJob()">Apply Now</button>
+                </div>
+                <div class="job">
+                    <h3>Cashier</h3>
+                    <p>Location: San Francisco, CA</p>
+                    <p>Keywords: Customer Service, Retail</p>
+                    <button type="button" onclick="applyForJob()">Apply Now</button>
+                </div>
+                <div class="job">
+                    <h3>Personal Assistant</h3>
+                    <p>Location: Austin, TX</p>
+                    <p>Keywords: Organization, Administration</p>
+                    <button type="button" onclick="applyForJob()">Apply Now</button>
+                </div>
+            </section>
+            <section id="jobList" class="job-list">
+                <!-- Job listings will be appended here by JavaScript -->
+            </section>
+        </div>
     </main>
     <script src="scripts.js" defer></script>
     <script src="app.js" defer></script>
